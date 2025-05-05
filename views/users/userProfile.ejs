@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+<body>
+<nav class="navbar">
+    <ul class="nav-list">
+        <li><a href="/books">Books</a></li>
+        <li><a href="/books/createBook">Create Book</a></li>
+        <li><a href="/user/profile">Profile</a></li>
+        <li><a href="/users/events">Create Events</a></li>
+        <li><a href="#" class="logout">Logout</a></li>
+    </ul>
+</nav>
+
+
+<div id="user-info">
+    <form id="avatar-form" enctype="multipart/form-data">
+        <input type="file" id="avatar-input" name="avatar">
+        <img src="" alt="Avatar" id="avatar-img">
+    </form>
+    <div class="profile-field"><strong>Username:</strong> <span id="username"></span></div>
+    <div class="profile-field"><strong>Email:</strong> <span id="email"></span></div>
+    <div class="profile-field"><strong>Profile Created:</strong> <span id="created-at"></span>
+    </div>
+    <div class="profile-field" id="updated-block"><strong>Last Updated:</strong> <span id="updated-at"></span></div>
+
+
+    <button class="edit-profile-button">Edit Profile</button>
+    <button class="delete-profile-button">Delete Profile</button>
+</div>
+
+<script src="/js/auth/userChecker.js"></script>
+<script src="/js/users/avatar.js"></script>
+<script src="/js/users/profile.js"></script>
+
+
+</body>
+</html>
+
+
+

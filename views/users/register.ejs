@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+
+
+    <h2>Register</h2>
+
+    <div id="message-container">
+
+    </div>
+
+    <form id="registerForm">
+        <div class="row">
+            <label for="userName">User Name</label>
+            <input type="text" name="userName" id="userName" placeholder="Name">
+        </div>
+
+        <div class="row">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="email@example.com">
+        </div>
+
+        <div class="row">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder=" Password">
+            <br>
+            <button type="button" id="togglePassword">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Register">
+        </div>
+
+        <a href="/user/login" class="link">Already have an account? LogIn</a>
+
+    </form>
+
+
+
+<script src="/js/auth/register.js"></script>
+</body>
+</html>
